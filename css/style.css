@@ -1,0 +1,85 @@
+/* ## Layout */
+
+
+body{
+    width: 1440px;
+    margin: auto 300px;
+}
+
+.navbar ul li{
+    display: inline;
+    text-decoration: none;
+    margin: auto 10px;
+    padding: auto 10px;
+}
+
+.mainContent{
+    display: flex;
+    align-content: flex-end;
+}
+
+.heroImage img{
+    width: 800px;
+ 
+}
+
+.heroImage{
+    width: 600px;
+    height:100px;
+}
+
+.container{
+    width: 1440px;
+    display: flex;
+    margin: auto 0px;
+}
+
+.container h1{
+    font-size: 3rem;
+}
+
+.sideContent{
+ position: relative;
+}
+
+.article{
+    display: flex;
+    width: 400px;
+    margin: 20px 10px;
+    padding: 10px 10px;
+}
+
+.article img{
+    width: 120px;
+    height: 150px;
+}
+
+.artContent{
+  margin: auto 20px;
+}
+
+
+/* ## Colors
+
+### Primary
+
+- Soft orange: hsl(35, 77%, 62%)
+- Soft red: hsl(5, 85%, 63%)
+
+### Neutral
+
+Off-white: hsl(36, 100%, 99%)
+Grayish blue: hsl(233, 8%, 79%)
+Dark grayish blue: hsl(236, 13%, 42%)
+Very dark blue: hsl(240, 100%, 5%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 15px
+
+### Font
+
+- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 400, 700, 800 */
