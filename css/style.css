@@ -1,10 +1,25 @@
 /* ## Layout */
 
+  html *,
+  html *:before,
+  html *:after {
+    box-sizing: border-box;
+    transition: 0.5s ease-in-out;
+  }
+  html i,
+  html em,
+  html b,
+  html strong,
+  html span {
+    transition: none;
+  }
+  
 
 body{
     width: 1440px;
     height: auto;
     margin: auto;
+    outline: none;
 }
 
 p{
@@ -28,17 +43,12 @@ h3{
     font-size: 2rem;
 }
 
-h4{
-    
+h5 a:hover{
+  color: hsl(5, 85%, 63%);;
 }
 
-h5{
-    color:hsl(36, 100%, 99%);
-    font-weight: bold;
-}
-
-h6{
-    font-weight: bold;
+h6 a:hover{
+  color: hsl(5, 85%, 63%);;
 }
 
 hr{
@@ -46,44 +56,164 @@ hr{
     margin: 40px auto;
 }
 
-.navbar a{
-    text-decoration: none;
+.container-fluid ul{
+  margin-left: 50%;
+  font-weight: bold;
+}
+
+
+nav {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+    background-color: transparent;
+}
+
+
+nav ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: hsl(236, 13%, 42%);
+  text-transform: uppercase;
+  margin: 0px 12px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: #555;
+}
+
+/* .navbar a{
+    padding: auto; 
+     text-decoration: none;
     color: hsl(236, 13%, 42%);
+    /* transition: 0.5s;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    transform-origin: left; */
+ 
+
+
+ /* .navbar a:hover{
+    font-size: large;
+    color: hsl(5, 85%, 63%);
+    -webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+    transform:scaleX(0);
+    z-index: 1;
+} */
+
+.navbar ul li a {
+  position: relative;
+}
+.navbar ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: rgb(44, 44, 44);
+  height: 1px;
+}
+.navbar ul li a:hover:after {
+  width: 100%;
+}
+
+.navbar ul li a {
+  transition: all 0.5s;
+}
+
+.navbar ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+.navbar ul li a:hover {
+  color: hsl(5, 85%, 63%);
+  z-index: 1;
+}
+.navbar ul li a:hover:after {
+  z-index: -10;
+  animation:  1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
 }
 
 .navbar img{
-    margin: 30px 145px;
+    margin: auto 0%;
 }
 
-.navbar ul{
+/* .navbar ul{
     display: inline; 
     margin: 10px 120px;
-    padding: auto 20px;
+    padding: auto ;
+    
 }
 
 .navbar li{
     display: inline;
     text-decoration: none;
     margin: 10px 20px;
-    padding: auto 20px;
-}
+    padding: auto;
+} */
 
 .btn{
+    color:  hsl(240, 100%, 5%);
+    font-weight: bold;
+    border-width: 1px;
+    border-style: solid ;
+}
+
+  [class^=btn] {
     margin-top: 60px;
     width: 200px;
     height: 50px;
     border-radius: 0%;
-    background-color: hsl(240, 100%, 5%);
-    color: hsl(36, 100%, 99%);
-    font-weight: bold;
-    border-width: 1px;
-    border-style: solid;
-}
+    position: relative;
+    display: block;
+    overflow: hidden;
+    text-transform: uppercase;
+    border: 1px solid currentColor;
+  }
+
+
+  .btn:before {
+    content: "";
+    position: absolute;
+    color: hsl(36, 100%, 99%) ;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: hsl(5, 85%, 63%);
+    opacity: 50%;
+    transform: translateX(-100%);
+  }
+
+  
+
+  .btn:hover:before {
+    transform: translateX(0);
+  }
+  
 
 .mainArtContent{
     margin: 30px 0px 0px 0px;
     padding: 0px;
 }
+
 
 .mainContent{
    display: flex;
@@ -128,6 +258,13 @@ hr{
    color: hsl(233, 8%, 79%);
 }
 
+.sideContent a{
+    text-decoration: none;
+    color:hsl(36, 100%, 99%);
+    font-weight: bold;
+}
+
+
 .article{
     display: flex;
     width: 400px;
@@ -144,7 +281,92 @@ hr{
     margin: auto 20px;
 }
 
+.artContent a{
+    text-decoration: none;
+    font-weight: bold;
+    color:hsl(240, 100%, 5%);
+ }
 
+ @keyframes navbar {
+    0% {
+      width: 0%;
+      height: 1px;
+    }
+    50% {
+      width: 100%;
+      height: 1px;
+    }
+    100% {
+      width: 100%;
+      height: 100%;
+      background: #333;
+    }
+  }
+
+
+  @media screen and (max-width: 768px) {
+
+  body{
+    width: 100%;
+    margin: auto 1%;
+  }
+
+  .container-fluid ul{
+    margin-left: 0%;
+    text-align: left;
+  }
+  
+
+  .navbar{
+    display:block;
+    width: auto;
+    height: auto;
+    margin: auto 2% ;
+  }
+
+  #mainContent{
+    display:block;
+    width: auto;
+    height: auto;
+    margin: auto 2%;
+  }
+  
+  .heroImage img{
+    display:block;
+    width: 110%;
+    height: auto;
+    margin: auto 2% ;
+  }
+
+  .heroImage {
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+
+  .mainContent{
+    display: block;
+    width: 100%;
+    margin: auto 2%;
+    margin-bottom: 5%;
+  }
+
+  #sideContent{
+   display: block;
+   position: relative;
+   width: auto;
+   height: auto;
+   margin: auto 2%;
+  } 
+
+  #footerBunner{
+    display: block;
+    justify-content:center;
+    width: auto;
+    height: auto;
+    margin: auto 5%;
+  }
+  }
 /* ## Colors
 
 ### Primary
