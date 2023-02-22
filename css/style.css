@@ -38,7 +38,23 @@ h2{
 h3{
   color:hsl(233, 8%, 79%);
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1rem;
+}
+
+h4{
+  color:hsl(233, 8%, 79%);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+
+
+h3 a:hover{
+color: hsl(5, 85%, 63%);
+} 
+
+h4 a:hover{
+color: hsl(5, 85%, 63%);
 }
 
 hr{
@@ -51,14 +67,12 @@ margin-left: 50%;
 font-weight: bold;
 }
 
-
 nav {
   width: 80%;
   margin: 0 auto;
   padding: 50px 0;
   background-color: transparent;
 }
-
 
 nav ul li a {
 display: inline-block;
@@ -67,18 +81,61 @@ color: hsl(236, 13%, 42%);
 text-transform: uppercase;
 margin: 0px 12px;
 }
-nav ul li a,
+
+/* nav ul li a,
 nav ul li a:after,
 nav ul li a:before {
 transition: all .5s;
 }
+
 nav ul li a:hover {
 color: #555;
+} */
+
+.navbar ul li a {
+  position: relative;
+  }
+
+.navbar ul li a:after {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+width: 0%;
+content: '.';
+color: transparent;
+background: rgb(44, 44, 44);
+height: 1px;
+}
+
+.navbar ul li a:hover:after {
+width: 100%;
 }
 
 .navbar ul li a {
-position: relative;
+transition: all 0.5s;
 }
+
+.navbar ul li a:after {
+text-align: left;
+content: '.';
+margin: 0;
+opacity: 0;
+
+}
+.navbar ul li a:hover {
+color: hsl(5, 85%, 63%);
+z-index: 1;
+}
+
+.navbar ul li a:hover:after {
+z-index: -10;
+animation:  1s forwards;
+-webkit-animation: fill 1s forwards;
+-moz-animation: fill 1s forwards;
+opacity: 1;
+} 
 
 .navbar img{
   margin: auto 0%;
@@ -89,6 +146,35 @@ position: relative;
   font-weight: bold;
   border-width: 1px;
   border-style: solid ;
+}
+
+[class^=btn] {
+  margin-top: 60px;
+  width: 200px;
+  height: 50px;
+  border-radius: 0%;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  color: hsl(36, 100%, 99%) ;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: hsl(5, 85%, 63%);
+  opacity: 50%;
+  transform: translateX(-100%);
+}
+
+.btn:hover:before {
+  transform: translateX(0);
 }
 
 .mainArtContent{
@@ -166,6 +252,22 @@ position: relative;
   color:hsl(240, 100%, 5%);
 }
 
+@keyframes navbar {
+  0% {
+    width: 0%;
+    height: 1px;
+  }
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    background: #333;
+  }
+}
+
 @media screen and (max-width: 768px) {
 
 body{
@@ -228,3 +330,27 @@ body{
   margin: auto 5%;
 }
 }
+/* ## Colors
+
+### Primary
+
+- Soft orange: hsl(35, 77%, 62%)
+- Soft red: hsl(5, 85%, 63%)
+
+### Neutral
+
+Off-white: hsl(36, 100%, 99%)
+Grayish blue: hsl(233, 8%, 79%)
+Dark grayish blue: hsl(236, 13%, 42%)
+Very dark blue: hsl(240, 100%, 5%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 15px
+
+### Font
+
+- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 400, 700, 800 */
