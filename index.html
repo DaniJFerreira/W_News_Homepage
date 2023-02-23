@@ -22,29 +22,27 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg" role="nav bar">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="./assets/images/logo.svg" alt=""></a>
+    <a class="navbar-brand" href="#"><img src="./assets/images/logo.svg" aria-label="link on the logo to the top of the page or main page" alt="logo"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="#">New</a></li> 
-        <li class="nav-item"><a class="nav-link" href="#">Popular</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Trending</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Categories</a></li>
+        <li class="nav-item"><a class="nav-link" aria-current="page" aria-label="nav bar link to the home section" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" aria-label="nav bar link to the New news section">New</a></li> 
+        <li class="nav-item"><a class="nav-link" href="#" aria-label="nav bar link to the polular section">Popular</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" aria-label="nav bar link to the treding section">Trending</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" aria-label="nav bar link to the Categories section">Categories</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<main id="mainContent" class="container col-lg-6">
-  <div class="heroImage">
-    <img src="./assets/images/image-web-3-desktop.jpg" alt=""> 
+<main id="mainContent" class="container col-lg-6" role="main">
+  <div class="heroImage" role="hero image">
+    <img src="./assets/images/image-web-3-desktop.jpg" alt="hero image"> 
   <div class="mainContent">
     <h1 class="mainTitle"> The Bright Future of Web 3.0?</h1>
   <div class="mainArtContent"> 
@@ -58,19 +56,19 @@
 
 <Section id="sideContent" class="sideContent col-lg-3">
   <h2>New</h2>
-    <h3><a href="#">Hydrogen VS Electric Cars</a></h3>
+    <h3><a href="#" aria-label="side section link New Categories section">Hydrogen VS Electric Cars</a></h3>
     <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
       <hr>
-    <h3><a href="#">The Downsides of AI Artistry</a></h3>
+    <h3><a href="#" aria-label="side section link New Categories section">The Downsides of AI Artistry</a></h3>
     <P>What are the possible adverse effects of on-demand AI image generation?</P>
       <hr>
-    <h3><a href="#">Is VC Funding Drying Up?</a></h3>
+    <h3><a href="#" aria-label="side section link New Categories section">Is VC Funding Drying Up?</a></h3>
     <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
 </Section>
 </main>
 
 <section id="footerBunner" class="container col-lg-6">
-  <div class="article col-md-3">
+  <div class="article col-md-3" role="article">
     <img src="./assets/images/image-retro-pcs.jpg" alt="">
       <div class="artContent"> 
       <h3>01</h3>
@@ -79,7 +77,7 @@
       </div>
   </div>
 
-  <div class="article col-md-3">
+  <div class="article col-md-3" role="article">
     <img src="./assets/images/image-top-laptops.jpg" alt="">
       <div class="artContent"> 
       <h3>02</h3>
@@ -88,7 +86,7 @@
       </div>
   </div>
 
-  <div class="article col-md-3">
+  <div class="article col-md-3" role="article">
    <img src="./assets/images//image-gaming-growth.jpg" alt="">
     <div class="artContent"> 
       <h3>03</h3>
@@ -98,9 +96,9 @@
   </div>
 </section>
   
-  <div class="attribution">
+  <div class="attribution" role="contentInfo">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Daniel Ferreira &copy; 2022</a>.
+    Coded by <a href="https://danijferreira.github.io/Mycvonline/" aria-label=" link to the website Mycvonline">Daniel Ferreira &copy; 2022</a>.
   </div>
 </body>
 </html>
